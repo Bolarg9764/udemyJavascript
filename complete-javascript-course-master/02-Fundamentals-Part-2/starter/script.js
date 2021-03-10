@@ -174,9 +174,9 @@ let calctip = function (bill) {
         }
 }
 
-calctip(400); // output the tip will be 80
+calctip(400); // output the tip will be 80.00
 calctip(50); // output the tip will be 7.5
-calctip(300); // output the tip will be 45
+calctip(300); // output the tip will be 45.00
 
 
 
