@@ -259,7 +259,7 @@ TEST DATA: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.9
 GOOD LUCK 😀
 */
 
-let Mark = {
+/* let Mark = {
   fullName: 'Mark Miller',
   MassInKG: 78,
   heightInMts: 1.69, 
@@ -288,4 +288,145 @@ console.log(MarkBMI);
 console.log(JonBMI);
 console.log(Math.round(calcBMI(Mark.MassInKG, Mark.heightInMts)));
 console.log(Math.round(calcBMI(Jon.MassInKG, Jon.heightInMts)));
+ */
+const types = [];
+for(let i = 1; i <= 10; i++) {
+console.log(`lift weight rep ${i}`);
+}
 
+//console.log(jonas);
+/* for(let i = 0; i < jonasArray.length; i++) {
+console.log(jonasArray[i], typeof jonasArray[i]);
+types.push(typeof jonasArray[i]);
+}
+ */
+//filling type array
+console.log(types);
+
+const years = [1991, 2007, 1969, 2020];
+const ages =[];
+
+for (let index = 0; index < years.length; index++) {
+  ages.push(2037 - years[index]);
+}
+
+console.log(ages);
+
+
+//continue and break
+console.log('---ONLY STRINGS---');
+for(let i = 0; i < jonasArray.length; i++) {
+    if (typeof jonasArray[i] !== 'string')continue;
+      console.log(jonasArray[i], typeof jonasArray[i]);
+  }
+console.log('---BREAK WITH NUMBERS---');
+for(let i = 0; i < jonasArray.length; i++) {
+  if (typeof jonasArray[i] === 'number')break;
+  console.log(jonasArray[i], typeof jonasArray[i]);
+  }
+  
+  
+  
+  
+  console.log('---DECREASING LOOP---');
+  for (let index = jonas.length - 1; index >= 0; index--) {
+    const element = array[index];
+    
+  }
+  
+for (let exercise = 1; exercise < 4; exercise++) {
+  console.log(`------- Starting exercise ${exercise}`);
+  //const element = array[exercise];
+  for (let rep = 0; rep < 6; rep++) {
+    console.log(`Lifting weight repetition ${rep}`);
+  //const element = array[rep];
+    
+  }
+}
+
+
+/* ==================
+ FOR LOOP 13.04.2021
+====================*/
+
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`lifting weigths repetition ${rep}`);
+}
+
+let rep = 1;
+while (rep <= 10) {
+    console.log(`lifting weigths repetition ${rep}`);
+rep++;
+    }
+
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+console.log(dice);
+
+while (dice !== 6) {
+  console.log(`you rolled a ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice === 6) {
+    console.log(`Loop is about to end...`);
+  }
+}
+
+/* ====================
+//CODING CHALLENGE # 4
+=======================*/
+///////////////////////////////////////
+// Coding Challenge #4
+
+/*
+Let's improve Steven's tip calculator even more, this time using loops!
+
+1. Create an array 'bills' containing all 10 test bill values
+2. Create empty arrays for the tips and the totals ('tips' and 'totals')
+3. Use the 'calcTip' function we wrote before (no need to repeat) to calculate tips and total values (bill + tip) 
+for every bill value in the bills array. Use a for loop to perform the 10 calculations!
+
+TEST DATA: 22, 295, 176, 440, 37, 105, 10, 1100, 86 and 52
+
+HINT: Call calcTip in the loop and use the push method to add values to the tips and totals arrays 😉
+
+4. BONUS: Write a function 'calcAverage' which takes an array called 'arr' as an argument. This function 
+calculates the average of all numbers in the given array. This is a DIFFICULT challenge (we haven't done this before)! Here is how to solve it:
+  4.1. First, you will need to add up all values in the array. To do the addition, start by creating a variable 'sum' that starts at 0. 
+  Then loop over the array using a for loop. In each iteration, add the current value to the 'sum' variable. This way, by the end of the loop, 
+  you have all values added together
+  4.2. To calculate the average, divide the sum you calculated before by the length of the array (because that's the number of elements)
+  4.3. Call the function with the 'totals' array
+
+GOOD LUCK 😀
+*/
+
+
+let calctip4 = function (bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15: bill * 0.2;
+}
+  
+
+  let billArray = [22, 295, 176, 440, 37, 105, 10, 1100, 86 ,52];
+  let tipArray = [];
+  let totalArray = [];
+
+  for(let i = 0; i < billArray.length; i++) {
+    let tip = calctip4(billArray[i]);
+    tipArray.push(tip);
+    totalArray.push(tip + billArray[i]);
+  }
+
+  console.log(billArray, tipArray, totalArray);
+
+  let calcAvg = function(arr) {
+    let sum = 0;
+      for(let i = 0; i < arr.length; i++) {
+        //sum = sum + arr[i];
+        sum += arr[i];
+      }
+      return sum / arr.length;
+  }
+  console.log(calcAvg([2, 3, 7]));
+  console.log(calcAvg(totalArray));
+  console.log(calcAvg(tipArray));
+  
